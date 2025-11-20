@@ -1,0 +1,41 @@
+Fotbalový turnaj - databáze hráčů, klubů a zápasů.
+Databáze pro pořadatele turnajů, kde budou zaznamenány kluby, hráči v klubech, zápasy, stadion, soutěž, kategorie.
+1.Klub
+-id_klub pk
+-název
+-mesto
+
+2.Kategorie
+-id_kategorie pk
+-název
+-rocnik_od
+
+3.Hráč
+-id_hrac pk
+-jmeno
+-prijmeni
+-datum_narozeni
+-pohlavi
+-id_klub ck
+-id_kategorie ck
+
+4.Stadion
+-id_stadion pk
+-adresa
+-název
+
+5.Soutěž
+-id_soutez pk
+-nazev
+-id_kategorie ck
+
+6.Zápasy
+-id_zapas pk
+-id_domaci_klub ck
+-id_hoste_klub ck
+-datum
+-cas
+-skore_domaci
+-skore_hoste    
+-id_stadion ck
+-id_soutez ck
